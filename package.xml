@@ -1,0 +1,21 @@
+<package>
+  <name>ddynamic_reconfigure_cpp</name>
+  <version>0.0.1</version>
+  <description>
+    Dynamic reconfigure with an extra sprinkling of templates.
+  </description>
+  <maintainer email="jacquelinekay1@gmail.com">Jackie Kay</maintainer>
+  <license>BSD</license>
+
+  <author>Jackie Kay</author>
+
+  <export>
+    <rosdoc config="rosdoc.yaml" />
+  </export>
+
+  <buildtool_depend version_gte="0.5.87">catkin</buildtool_depend>
+
+  <build_depend>dynamic_reconfigure</build_depend>
+
+  <run_depend>dynamic_reconfigure</run_depend>
+</package>
