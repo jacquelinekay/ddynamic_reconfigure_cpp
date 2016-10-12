@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8)
-project(dynamic_reconfigure)
+project(ddynamic_reconfigure_cpp)
 
-find_package(catkin REQUIRED COMPONENTS dynamic_reconfigure)
+find_package(catkin REQUIRED COMPONENTS dynamic_reconfigure roscpp)
 find_package(Boost REQUIRED COMPONENTS system thread)
 
 include_directories(include ${catkin_INCLUDE_DIRS} ${Boost_INCLUDE_DIRS})
@@ -28,7 +28,7 @@ if(CATKIN_ENABLE_TESTING)
 # compile a simple example
   add_executable(api_test src/api_sketch.cpp)
   target_link_libraries(api_test ${catkin_LIBRARIES})
-  target_compile_options(api_test "-std=c++11")
+  target_compile_options(api_test PUBLIC "-std=c++11")
 endif()
 
 catkin_package(INCLUDE_DIRS include
